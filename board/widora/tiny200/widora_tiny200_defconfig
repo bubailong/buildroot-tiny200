@@ -19,8 +19,6 @@ BR2_TARGET_UBOOT_NEEDS_DTC=y
 BR2_TARGET_UBOOT_FORMAT_BIN=y
 BR2_TARGET_UBOOT_SPL=y
 BR2_TARGET_UBOOT_SPL_NAME="u-boot-sunxi-with-spl.bin"
-BR2_TARGET_UBOOT_BOOT_SCRIPT=y
-BR2_TARGET_UBOOT_BOOT_SCRIPT_SOURCE="board/widora/tiny200/boot.cmd"
 BR2_TARGET_UBOOT_PATCH="board/widora/tiny200/patch/u-boot"
 BR2_TARGET_UBOOT_CUSTOM_DTS_PATH="board/widora/tiny200/devicetree/uboot/suniv-f1c100s.dtsi board/widora/tiny200/devicetree/uboot/suniv-f1c100s-generic.dts"
 
