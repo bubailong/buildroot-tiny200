@@ -1,7 +1,7 @@
 # Buildroot Package for Widora TINY200
 Opensource BSP for Widora TINY200 boards and Allwinner F1C200s
 ## Install
-### Install necessary pacages
+### Install necessary packages
 ```
 sudo apt install wget unar build-essential swig libncurses-dev libpython3-dev libssl-dev
 ```
