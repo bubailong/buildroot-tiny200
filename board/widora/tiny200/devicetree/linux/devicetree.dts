@@ -49,45 +49,46 @@
 	};
 };
 
-// &spi0 {
-// 	status = "okay";
-// 	spi-max-frequency = <50000000>;
-// 	flash: w25q128@0 {
-// 		#address-cells = <1>;
-// 		#size-cells = <1>;
-// 		compatible = "winbond,w25q128", "jedec,spi-nor";
-// 		reg = <0>;
-// 		spi-max-frequency = <50000000>;
-// 		partitions {
-// 			compatible = "fixed-partitions";
-// 			#address-cells = <1>;
-// 			#size-cells = <1>;
+&spi0 {
+	status = "okay";
+	spi-max-frequency = <50000000>;
+	spi-flash {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		// compatible = "winbond,w25q128", "jedec,spi-nor";
+		compatible = "spi-nand";
+		reg = <0>;
+		spi-max-frequency = <50000000>;
+		partitions {
+			compatible = "fixed-partitions";
+			#address-cells = <1>;
+			#size-cells = <1>;
 
-// 			partition@0 {
-// 				label = "u-boot";
-// 				reg = <0x000000 0x0f0000>;
-// 				read-only;
-// 			};
+			partition@0 {
+				label = "u-boot";
+				reg = <0x000000 0x80000>;
+				read-only;
+			};
 
-// 			partition@100000 {
-// 				label = "dtb";
-// 				reg = <0x0f0000 0x10000>;
-// 				read-only;
-// 			};
+			partition@100000 {
+				label = "dtb";
+				reg = <0x80000 0x10000>;
+				read-only;
+			};
 
-// 			partition@110000 {
-// 				label = "kernel";
-// 				reg = <0x100000 0x700000>;
-// 				read-only;
-// 			};
+			partition@110000 {
+				label = "kernel";
+				reg = <0x100000 0x700000>;
+				read-only;
+			};
 
-// 			partition@510000 {
-// 				label = "rootfs";
-// 				reg = <0x800000 0x800000>;
-// 			};
-// 		};
-// 	};
-// };
+			partition@510000 {
+				label = "rootfs";
+				reg = <0x800000 0x800000>;
+			};
+		};
+	};
+};
 
 // &uart0 {
 // 	pinctrl-names = "default";
