@@ -3,19 +3,19 @@ Opensource BSP for Widora TINY200 boards and Allwinner F1C200s
 ## Install
 ### Install necessary packages
 ```
-sudo apt install wget unar build-essential swig libncurses-dev libpython3-dev libssl-dev
+sudo apt install wget unzip build-essential git swig libncurses-dev libpython3-dev libssl-dev
 ```
-### Download and extract BSP
+### Download BSP
 **Notice: Root permission is not necessery for download or extract.**
 ```
-wget https://github.com/aodzip/buildroot-tiny200/archive/master.zip -O buildroot-tiny200.zip
-unar buildroot-tiny200.zip
+git clone https://github.com/aodzip/buildroot-tiny200
 ```
 ## Make the first build
 **Notice: Root permission is not necessery for build firmware.**
 ### Apply defconfig
 **Caution: Apply defconfig will reset all buildroot configurations to default values. Generally, you only need to apply it once.**
 ```
+cd buildroot-tiny200
 make widora_tiny200_defconfig
 ```
 ### Regular build

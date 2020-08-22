@@ -5,7 +5,8 @@
 
 / {
 	model = "Widora TINY200 R3";
-	compatible = "allwinner,suniv-f1c100s";
+	compatible = "allwinner,suniv-f1c200s",
+			 "allwinner,suniv-f1c100s";
 
 	aliases {
 		serial0 = &uart1;
@@ -34,7 +35,6 @@
 		compatible = "qiaodian,qd43003c0-40", "simple-panel";
 		#address-cells = <1>;
 		#size-cells = <0>;
-		enable-gpios = <&pio 4 12 GPIO_ACTIVE_HIGH>;
 
 		port@0 {
 			reg = <0>;
