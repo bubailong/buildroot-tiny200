@@ -4,6 +4,7 @@ Opensource BSP for Widora TINY200 boards and Allwinner F1C200s
 ### Install necessary packages
 ```
 sudo apt install wget unzip build-essential git swig libncurses-dev libpython3-dev libssl-dev
+sudo apt install pkg-config zlib1g-dev libusb-dev libusb-1.0-0-dev
 ```
 ### Download BSP
 **Notice: Root permission is not necessery for download or extract.**
@@ -31,6 +32,14 @@ If you have a multicore CPU, you can try
 make -j ${YOUR_CPU_COUNT}
 ```
 or buy a powerful PC for yourself.
+
+## Build sunxi-tools
+```
+git clone https://github.com/Icenowy/sunxi-tools.git -b f1c100s-spiflash
+cd sunxi-tools
+make 
+sudo make install
+```
 
 ## Helper Scripts
  - fel-uboot.sh: Run U-Boot in RAM by FEL mode.
